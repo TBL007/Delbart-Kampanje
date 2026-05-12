@@ -10,8 +10,9 @@ Spre informasjon om hvordan å ungå dette og konsekvenser
 - Splash Informasjons side med bilde av blurret lettkledd person som splash vidre ned videoer og sånt
 - Informasjons insamling (har du fått eller sendt naken bilder osv...) anonym
 - Quiz om man burde dele eller ikke basert på bilder (Kan også være meningsmåling)
-- Admin page med resultater fra innsamlingen - redigere på og legge til Artikler/ videoer 
+- Admin page med resultater fra innsamlingen - redigere på og legge til Artikler/ videoer med sanity
 - inlogging for admin's
+- sanity for content management
 - Diverse disclaimers du kan se nakenhet osv..
 - Footer med kontakt oss og SoMe Links
 - Nav standard logo venstre, fixed top burger meny tlf
@@ -21,12 +22,15 @@ Spre informasjon om hvordan å ungå dette og konsekvenser
 - Vite
 - Node.js
 - Css
-- Linux-Ubuntu
-- Nginx
+
 - Diverse Node.js libraries
+- sanity
 ## Design Profil
 - [Farge palett](https://coolors.co/palette/2b2d42-8d99ae-edf2f4-ef233c-d90429)
 - Logo-er ![Sort](./bilder/Politiet_logo_sort.svg), ![Hvit](./bilder/Politiet_logo_hvit.svg)
+## Div lenker
+- [Path skjema](https://www.figma.com/board/kqkuC6UGT9mVym0hU5aV9K/Delbart--web?node-id=0-1&t=zzGRbmEa4evulfoB-1)
+- [Design](https://www.figma.com/design/dvRAx9UrUEJPN18w8lhgAr/Delbart-web?node-id=1-7&t=Cil3qqqpP3aYhgVh-1)
  ## Målgruppe
 - Ungdommer 14-23 åringer
 
