@@ -22,9 +22,11 @@ Spre informasjon om hvordan å ungå dette og konsekvenser
 - Css
 - Diverse Node.js libraries
 - sanity
+- Figma
 ## Design Profil
 - [Farge palett](https://coolors.co/palette/2b2d42-8d99ae-edf2f4-ef233c-d90429)
 - Logo-er ![Sort](./bilder/Politiet_logo_sort.svg), ![Hvit](./bilder/Politiet_logo_hvit.svg)
+- Fonter: Breuer Text Regular, Breuer Headline
 ## Div lenker
 - [Path skjema](https://www.figma.com/board/kqkuC6UGT9mVym0hU5aV9K/Delbart--web?node-id=0-1&t=zzGRbmEa4evulfoB-1)
 - [Design](https://www.figma.com/design/dvRAx9UrUEJPN18w8lhgAr/Delbart-web?node-id=1-7&t=Cil3qqqpP3aYhgVh-1)

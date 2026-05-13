@@ -9,8 +9,8 @@
 
 ### læring
 - notater/konseptet
-## Tirsdag 11.06
-### gjort
+## Tirsdag 12.05
+### Gjort
 - planlagt mer
 - startet path skjema
 - startet sanity for å lære megselv
@@ -18,3 +18,8 @@
 - gikk bra basicly bar mer tenking
 ### Læring
 - sanity er enkelt og bra for content management
+## Onsdag 13.05
+### Gjort
+- skisse/prototype i figma
+### refleksjon
+- gikk bra
