@@ -21,5 +21,10 @@
 ## Onsdag 13.05
 ### Gjort
 - skisse/prototype i figma
+- slagord - Del ansvarlig. Del Smart
+- usecase diagram
+- sanity
 ### refleksjon
-- gikk bra
+- gikk bra brukte Ai til slagord
+### Læring
+- lærte meg å fetch data fra sanity

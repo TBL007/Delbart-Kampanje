@@ -28,13 +28,13 @@ Spre informasjon om hvordan å ungå dette og konsekvenser
 - Logo-er ![Sort](./bilder/Politiet_logo_sort.svg), ![Hvit](./bilder/Politiet_logo_hvit.svg)
 - Fonter: Breuer Text Regular, Breuer Headline
 ## Div lenker
-- [Path skjema](https://www.figma.com/board/kqkuC6UGT9mVym0hU5aV9K/Delbart--web?node-id=0-1&t=zzGRbmEa4evulfoB-1)
+- [Path skjema og usecase diagram](https://www.figma.com/board/kqkuC6UGT9mVym0hU5aV9K/Delbart--web?node-id=0-1&t=zzGRbmEa4evulfoB-1)
 - [Design](https://www.figma.com/design/dvRAx9UrUEJPN18w8lhgAr/Delbart-web?node-id=1-7&t=Cil3qqqpP3aYhgVh-1)
 ## Målgruppe
 - Ungdommer 14-23 åringer
-
+- slagord Del ansvarlig. Del smart
 ### Andre muligheter 
 - ki løsning også
 - ### Server Hosting
 - set oppe en ubuntu server for å host siden og DB kanke gjøre port forwarding på de så må også ha siden på webserveren
-- trenger kanskje apache for sikkerhet
+- trenger kanskje nginx for sikkerhet

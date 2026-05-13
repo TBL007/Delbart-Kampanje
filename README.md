@@ -1,6 +1,6 @@
 # Delbart-Kampanje
-[Planlegging](/Planlegging/Planlegging.md)
-[Logg](/Logg/Logg.md)
+- [Planlegging](/Planlegging/Planlegging.md)
+- [Logg](/Logg/Logg.md)
 
 
 ## Fil struktur
