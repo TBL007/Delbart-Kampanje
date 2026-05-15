@@ -17,12 +17,13 @@ Spre informasjon om hvordan å ungå dette og konsekvenser
 - Light/Dark Mode?
 ## Teknologi
 - React
-- Vite
+- next.js byttet fra vite
 - Node.js
-- Css
+- Tailwind-Css (next.js default)
 - Diverse Node.js libraries
 - sanity
 - Figma
+- supabase
 ## Design Profil
 - [Farge palett](https://coolors.co/palette/2b2d42-8d99ae-edf2f4-ef233c-d90429)
 - Logo-er ![Sort](./bilder/Politiet_logo_sort.svg), ![Hvit](./bilder/Politiet_logo_hvit.svg)
