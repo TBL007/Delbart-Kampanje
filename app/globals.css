@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #2B2D42;
+  --foreground: #8D99AE;
+  --tekst: #ffffff;
 }
 
 @theme inline {
@@ -10,17 +11,37 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Breuer-Text';
+  src: url('/fonts/BreuerText-Regular.woff2') format('woff2'),
+       url('/fonts/BreuerText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
 }
+
+@font-face {
+  font-family: 'Breuer-Headline';
+  src: url('/fonts/BreuerHeadline.woff2') format('woff2'),
+       url('/fonts/BreuerHeadline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+
+
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--tekst);
+  font-family: 'Breuer-Text',Arial, Helvetica, sans-serif;
 }
+
+h1 h2 h3 h4 h5{
+  font-family: "Breuer-Headline", Arial, Helvetica, sans-serif;
+}
+
+

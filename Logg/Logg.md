@@ -43,3 +43,13 @@
 ### læring
 - sanity + next.js er bra kombo for å ha cms bygd inn i siden
 - prisma får for mange errors med next.js
+## Mandag 18.05
+### gjort
+- laget nav og footer
+- splash page
+- css
+### refleksjon
+- gikk bra men litt treigt
+- må komme meg in i flyten av tailwind
+### læring
+- tailwind css og sanity image

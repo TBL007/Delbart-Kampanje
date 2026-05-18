@@ -5,7 +5,7 @@ import { client } from '../../sanity/lib/client'
 export default async function Page() {
   const questions = await client.fetch(`*[_type == "surveyQuestion"]`)
 
-  const question = questions[0] // 👈 IMPORTANT FIX
+  const question = questions[0] 
 
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
