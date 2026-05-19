@@ -5,7 +5,7 @@ import { Innleggtype } from "./types"
 import { urlFor } from './utils/sanity/image';
 
 export default async function Page() {
-  const innlegg = await client.fetch(`*[_type=="innlegg"]{tittel,innhold}`)
+  const innlegg = await client.fetch<Innleggtype[]>(`*[_type=="innlegg"]{tittel,innhold}`)
 
   function getYouTubeID(url: string) {
     const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
@@ -36,15 +36,13 @@ export default async function Page() {
             params="controls=1"
 
           />
-          
-       
       )
     }
   }
   return (
     <>
       <section className="flex flex-col items-center justify-center">
-        <img className="h-full" src={"https://loremipsum.imgix.net/GTlzd4xkx4LmWsG1Kw1BB/ad1834111245e6ee1da4372f1eb5876c/placeholder.com-1280x720.png?w=1920&q=60&auto=format,compress"} />
+        <img className="aspect-16/9" src={"/splash.avif"}  />
         <h2 className="text-6xl absolute pb-80">
           Del ansvarlig. Del smart
         </h2>

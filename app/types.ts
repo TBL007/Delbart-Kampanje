@@ -30,3 +30,20 @@ export type VideoBlokk = {
   _type: "videoblokk";
   url?: string;
 };
+
+export type QuizAnswer = {
+  text: string;
+  correct: boolean;
+};
+
+export type QuizQuestion = {
+  question: string;
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+    };
+  };
+  answers: QuizAnswer[];
+  order: number;
+};
