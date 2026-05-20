@@ -23,7 +23,7 @@ export default function Quiz({ questions }: { questions: QuizQuestion[], }) {
     }
     const question = questions[current]
     if (end) return (
-        <section className="flex flex-col h-full">
+        <section className="flex flex-col h-screen">
             <h1> Quiz ferdig</h1>
             <h1> du klarte {points}/{questions.length}</h1>
             <button onClick={handlerestart}> prøv på nytt</button>
@@ -35,7 +35,7 @@ export default function Quiz({ questions }: { questions: QuizQuestion[], }) {
             <img src={urlFor(question.image).url()} className="size-1/2 aspect-16/9"/>
             <div className="flex  grid-cols-2 gap-2">
                 {question.answers.map((answer, ndx) => (
-                    <button key={ndx} onClick={() => handleCorrect(answer.correct)}>
+                    <button key={ndx} onClick={() => handleCorrect(answer.correct)} className="grid-cols-subgrid">
                         <h2 className="text-3xl">
                             {answer.text}
                         </h2>

@@ -9,7 +9,7 @@ export default function Footer() {
                 <img src={"/Politiet_logo_hvit.svg"} width={180} />
             </button>
             <Link href={"https://www.politiet.no/kontakt-politiet"}>
-                <h1 className="text-5xl">
+                <h1 className="text-5xl hover:text-blue-300">
                     Kontakt Politet
                 </h1>
             </Link>

@@ -47,3 +47,24 @@ export type QuizQuestion = {
   answers: QuizAnswer[];
   order: number;
 };
+
+export type SurveyQuestionType = "single" | "multiple" | "scale";
+
+export interface SurveyQuestionOption {
+  text: string;
+}
+
+export interface SurveyQuestion {
+  _id?: string;
+  _type: "surveyQuestion";
+
+  question: string;
+
+  type: SurveyQuestionType;
+
+  options?: SurveyQuestionOption[];
+
+  required?: boolean;
+
+  order: number;
+}

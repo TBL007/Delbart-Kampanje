@@ -53,3 +53,32 @@
 - må komme meg in i flyten av tailwind
 ### læring
 - tailwind css og sanity image
+## Tirsdag 19.05
+### gjort
+- quiz page funksjonalitet og litt design
+### refleksjon
+- gikk bra hadde noen feil med server-side og client side komponenter men fikk fikset det
+### læring
+- man kan ikke passe funksjoner mellom serverside - client side komponenter
+## Onsdag 20.05
+### gjort
+- byttet navnet på "undersøkelse" siden til "studie" for å fikse router errors
+- la til POST api på /api/statistikk for å få data fra studie innleveringer til db #brukte ki her
+- studie siden
+- fikset stats display på admin
+- la til middleware til admin og login og brukere med copilot
+- la til custom nav links for admins
+- gjorde nav og footer litt penere
+### læring
+- litt mer tailwind
+- litt mer supabase
+- next-auth
+### refleksjon
+- gikk bra
+- brukte meste ki jeg har brukt hele prosjektet i dag
+
+## todo
+- update path skjema
+- styling
+- finne bra content til sanity
+
