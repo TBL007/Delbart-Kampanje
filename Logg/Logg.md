@@ -76,6 +76,14 @@
 ### refleksjon
 - gikk bra
 - brukte meste ki jeg har brukt hele prosjektet i dag
+## Torsdag 21.05
+### gjort
+- styling 
+- update path skjema
+### læring
+- tailwind
+### refleksjon 
+- gikk bra
 
 ## todo
 - update path skjema

@@ -41,7 +41,7 @@ export default async function Page() {
   }
   return (
     <>
-      <section className="flex flex-col items-center justify-center">
+      <section className="flex flex-col items-center justify-center mt-2">
         <img className="aspect-16/9" src={"/splash.avif"}  />
         <h2 className="text-6xl absolute pb-80">
           Del ansvarlig. Del smart

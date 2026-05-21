@@ -42,7 +42,7 @@ export default function Studie({ questions }: { questions: SurveyQuestion[] }) {
         <section className="felx felx-col h-screen">
             <h1>{question.question}</h1>
             {question.options.map((valg, ndx) => (
-                <button key={ndx} onClick={() => handleAnswer(question._id, valg.text)}>
+                <button key={ndx} onClick={() => handleAnswer(question._id, valg.text)} className="hover:text-blue-300">
                     <p>{valg.text}</p>
                 </button>))}
         </section>

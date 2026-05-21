@@ -36,8 +36,8 @@ export default async function AdminPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6" >
           {cards.map((card,ndx)=>(
           <Link href={card.href} key={ndx}>
-            <div className="bg-foreground rounded-lg shadow p-6 hover:shadow-lg transition cursor-pointer">
-              <h2 className="text-2xl font-semibold mb-2">{card.title}</h2>
+            <div className="group bg-foreground rounded-lg shadow p-6 hover:shadow-lg transition cursor-pointer hover:drop-shadow-xl ">
+              <h2 className="text-2xl font-semibold mb-2 border-b-2 group-hover:text-blue-300">{card.title}</h2>
               <p className="">
                 {card.desc}
               </p>

@@ -23,8 +23,10 @@ export default async function Page() {
   )
 
   return (
-    <div className='flex flex-col h-screen'>
-      <h1>Admin</h1>
+    
+    <div className='flex flex-col h-screen items-center '>
+      <h1 className='text-4xl mt-2 mb-4'>Studie</h1>
+      <section className='flex felx-col grid grid-cols-1 md:grid-cols-2 gap-6'>
 
       {statsResults.map(({ question, stats }) => {
         const totalResponses = stats.reduce(
@@ -50,12 +52,12 @@ export default async function Page() {
         })
 
         return (
-          <div key={question._id} style={{ marginBottom: 40 }}>
-            <h2>
+          <div key={question._id} style={{ marginBottom: 40 }} className='group bg-foreground p-2 rounded-lg hover:drop-shadow-lg'>
+            <h2 className='text-2xl border-b-2 w-100 group-hover:border-blue-100'>
               {question.question} ({totalResponses})
             </h2>
 
-            <ul>
+            <ul className='text-xl'>
               {fullStats.map((row) => (
                 <li key={row.option}>
                   {row.option}: {row.count} ({row.percentage.toFixed(1)}%)
@@ -65,6 +67,7 @@ export default async function Page() {
           </div>
         )
       })}
+      </section>
     </div>
   )
 }
