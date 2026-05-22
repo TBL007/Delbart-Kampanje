@@ -19,7 +19,7 @@ export default function Nav() {
         },
         {
             href: "/studie",
-            tekst: "studie"
+            tekst: "Undersøkelse"
         }
     ]
 

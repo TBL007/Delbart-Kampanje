@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { QuizQuestion } from "../types";
 import { urlFor } from "../utils/sanity/image";
+import Link from "next/link";
 
 export default function Quiz({ questions }: { questions: QuizQuestion[], }) {
     const [current, setCurrent] = useState(0)
@@ -27,17 +28,19 @@ export default function Quiz({ questions }: { questions: QuizQuestion[], }) {
             <h1 className="text-5xl "> Quiz ferdig</h1>
             <div className="flex flex-col items-center p-2  ">
                 <h1 className="text-4xl ">Du klarte {points}/{questions.length}</h1>
-                <button onClick={handlerestart} className="hover:drop-shadow hover:text-blue-300 text-2xl bg-foreground rounded-lg p-2 mt-40">Prøv på nytt</button>
+                <button onClick={handlerestart} className="hover:drop-shadow hover:text-blue-300 text-2xl bg-foreground rounded-lg p-2 mt-80">Prøv på nytt</button>
+                <Link href={"/"} className="hover:drop-shadow hover:text-blue-300 text-2xl bg-foreground rounded-lg p-2 mt-2">Hjem</Link>
             </div>
+            
         </section>
     )
     return (
         <section className="h-screen flex flex-col items-center mt-2 ">
             <h1 className="text-4xl mb-4">{question.question}</h1>
             <img src={urlFor(question.image).url()} className="size-1/2 aspect-16/9" />
-            <div className="flex  grid grid-cols-2 gap-4 mt-4">
+            <div className="flex  grid grid-cols-2 gap-4 mt-8 justify-between w-full">
                 {question.answers.map((answer, ndx) => (
-                    <button key={ndx} onClick={() => handleCorrect(answer.correct)} className=" hover:text-blue-300  bg-foreground rounded-lg hover:drop-shadow-xl pt-1 pb-1 pl-2 pr-2">
+                    <button key={ndx} onClick={() => handleCorrect(answer.correct)} className=" hover:text-blue-300  hover:drop-shadow-xl ">
                         <h2 className="text-3xl">
                             {answer.text}
                         </h2>
