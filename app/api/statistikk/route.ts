@@ -9,7 +9,7 @@ const supabase = createClient(
 )
 
 type SurveyAnswer = {
-  questionid: string
+  questionId: string
   value: string | string[] | number
 }
 
@@ -43,7 +43,7 @@ export async function POST(req: Request) {
       if (Array.isArray(answer.value)) {
         return answer.value.map((v) => ({
           response_id: response.id,
-          question_id: answer.questionid,
+          question_id: answer.questionId,
           answer_value: String(v),
         }))
       }
@@ -52,7 +52,7 @@ export async function POST(req: Request) {
       return [
         {
           response_id: response.id,
-          question_id: answer.questionid,
+          question_id: answer.questionId,
           answer_value: String(answer.value),
         },
       ]

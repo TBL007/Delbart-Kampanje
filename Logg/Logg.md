@@ -89,4 +89,14 @@
 - update path skjema
 - styling
 - finne bra content til sanity
-
+## Fredag 22.05
+### gjoty
+- styling
+### refleksjon
+- gikk bra
+## Tirsdag 26.05
+### Gjort
+- styling
+- refaktor av undersøkelse siden gjort bedre
+### refleksjon 
+- gikk bra

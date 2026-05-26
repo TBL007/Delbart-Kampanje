@@ -25,7 +25,7 @@ export default function Quiz({ questions }: { questions: QuizQuestion[], }) {
     const question = questions[current]
     if (end) return (
         <section className="flex flex-col h-screen items-center mt-2">
-            <h1 className="text-5xl "> Quiz ferdig</h1>
+            <h1 className="text-5xl "> Quiz fullført</h1>
             <div className="flex flex-col items-center p-2  ">
                 <h1 className="text-4xl ">Du klarte {points}/{questions.length}</h1>
                 <button onClick={handlerestart} className="hover:drop-shadow hover:text-blue-300 text-2xl bg-foreground rounded-lg p-2 mt-80">Prøv på nytt</button>

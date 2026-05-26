@@ -6,7 +6,7 @@ import { useSession, signOut } from "next-auth/react"
 
 export default function Nav() {
     const { data: session, status } = useSession()
-    const [burger, setBurger] = useState(false)
+    const [burger, setBurger] = useState(true)
 
     const publicLinks = [
         {
