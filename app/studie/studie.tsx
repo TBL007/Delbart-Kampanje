@@ -27,17 +27,17 @@ export default function Studie({
 
   function Complete() {
     return (
-      <section className="flex flex-col items-center h-screen bg-gradient-to-b from-[#EF233C]/0 to-foreground/40">
-        <h1 className="text-3xl">
+      <section className="flex flex-col items-center min-h-screen bg-gradient-to-b from-[#EF233C]/0 to-foreground/40 px-4 py-8">
+        <h1 className="text-xl sm:text-2xl md:text-3xl text-center">
           Du har allerede levert undersøkelsen
         </h1>
 
-        <Link href={"/"} className="w-full mt-50">
-          <div className="flex flex-col items-center text-3xl bg-[#EF233C]/40 p-2 w-full">
+        <Link href={"/"} className="w-full mt-20 sm:mt-30 md:mt-50">
+          <div className="flex flex-col items-center text-xl sm:text-2xl md:text-3xl bg-[#EF233C]/40 p-3 sm:p-4 w-full rounded">
             Hjem
           </div>
         </Link>
-        <button onClick={()=> localStorage.removeItem("studie")}>clear</button>
+        <button onClick={()=> localStorage.removeItem("studie")} className="text-sm mt-4 hover:text-blue-300">clear</button>
       </section>
     )
   }
@@ -86,18 +86,18 @@ export default function Studie({
   if (!questions.length) return <p>Loading...</p>
 
   return (
-    <section className="flex flex-col items-left h-screen ml-12 mt-20 gap-10">
-      <form onSubmit={handleSubmit}>
+    <section className="flex flex-col items-left min-h-screen px-4 sm:px-6 md:px-12 mt-20 gap-6 sm:gap-8 md:gap-10 pb-8">
+      <form onSubmit={handleSubmit} className="w-full">
         {questions.map((question, ndx) => (
           <div
             key={ndx}
-            className="border-b-2 border-foreground pb-4"
+            className="border-b-2 border-foreground pb-4 mb-6"
           >
-            <h1 className="text-6xl">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl">
               {question.question}
             </h1>
 
-            <div className="flex flex-row gap-30 text-4xl mt-8 ml-12">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-30 text-lg sm:text-2xl md:text-4xl mt-4 sm:mt-6 md:mt-8">
               {question.options.map((valg, ndx) => (
                 <div
                   key={ndx}
@@ -119,7 +119,7 @@ export default function Studie({
 
                   <label
                     htmlFor={`${question._id}-${ndx}`}
-                    className="peer-checked:text-blue-300"
+                    className="peer-checked:text-blue-300 cursor-pointer"
                   >
                     {valg.text}
                   </label>
@@ -129,14 +129,14 @@ export default function Studie({
           </div>
         ))}
 
-        <section className="flex flex-col h-screen items-center">
-          <h1 className="text-3xl mt-4">
+        <section className="flex flex-col h-fit items-center gap-4">
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 text-center">
             Ditt svar er helt anonymt
           </h1>
 
           <button
             type="submit"
-            className="hover:drop-shadow hover:text-blue-300 text-2xl bg-foreground rounded-lg p-2 mt-2 w-3/5"
+            className="hover:drop-shadow hover:text-blue-300 text-base sm:text-lg md:text-xl lg:text-2xl bg-foreground rounded-lg p-3 sm:p-4 w-full sm:w-3/5"
           >
             Lever undersøkelsen
           </button>

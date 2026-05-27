@@ -41,15 +41,15 @@ export default async function Page() {
     }
   }
   return (
-    <span className='w-full overflow-x-hidden'>
+    <span className='w-dvw overflow-x-hidden'>
       <section className="flex flex-col items-center justify-center mt-2 ">
-        <img className="aspect-16/9" src={"/splash.avif"} />
-        <div className='absolute flex flex-col mb-10 h-fit items-center justify-start'>
-        <h2 className="text-6xl  ">
+        <img className="aspect-16/9 w-full" src={"/splash.avif"} />
+        <div className='absolute flex flex-col mb-10 h-fit items-center justify-start px-4'>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center">
           Del ansvarlig. Del smart
         </h2>
         <Link href={"/studie"} className='items-center text-foreground'>
-          <h2 className="text-xl ">
+          <h2 className="text-sm sm:text-base md:text-xl ">
             Delta i undersøkelsen vår
           </h2>
         </Link>
@@ -58,10 +58,10 @@ export default async function Page() {
       </section >
       <section className="flex flex-col items-left w-full mt-10">
         {innlegg.map((innlegg, ndx) => (
-          <section key={ndx} className="flex flex-col w-full items-left gap-8 ml-10   ">
-            <h2 className="text-6xl">{innlegg.tittel}</h2>
+          <section key={ndx} className="flex flex-col w-full items-left gap-4 sm:gap-8 px-4 sm:px-6 md:px-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl">{innlegg.tittel}</h2>
             {innlegg.innhold.map((item, ndx) => (
-              <div key={ndx} className='w-2/5 h-fit  '>
+              <div key={ndx} className='w-full sm:w-4/5 md:w-3/5 h-fit  '>
                 {itemType(item)}
               </div>
             ))}

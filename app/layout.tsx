@@ -28,13 +28,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex flex-col min-h-screen overflow-x-hidden">
         <AuthProvider>
           <Nav />
-          <span className="mt-20"/>
-          {children}
+          <main className="mt-16 mb-10 sm:mt-20 flex-grow">
+            {children}
+          </main>
           <Footer />
         </AuthProvider>
       </body>
