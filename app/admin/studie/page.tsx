@@ -24,7 +24,7 @@ export default async function Page() {
 
   return (
     
-    <div className='flex flex-col h-screen items-center '>
+    <div className='flex flex-col h-fit min-h-screen items-center '>
       <h1 className='text-4xl mt-2 mb-4'>Studie</h1>
       <section className='flex felx-col grid grid-cols-1 md:grid-cols-2 gap-6'>
 

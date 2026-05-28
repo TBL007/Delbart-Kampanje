@@ -37,7 +37,7 @@ export default function Quiz({ questions }: { questions: QuizQuestion[], }) {
     return (
         <section className="min-h-screen flex flex-col items-center mt-2 px-4 py-8">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-4 text-center">{question.question}</h1>
-            <img src={urlFor(question.image).url()} className="w-full sm:w-4/5 md:w-3/5 lg:w-1/2 aspect-16/9" />
+            {question.image? <img src={urlFor(question.image).url()} className="w-full sm:w-4/5 md:w-3/5 lg:w-1/2 aspect-16/9" />: "" }
             <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-6 sm:mt-8 w-full px-2 sm:px-4">
                 {question.answers.map((answer, ndx) => (
                     <button key={ndx} onClick={() => handleCorrect(answer.correct)} className=" hover:text-blue-300 hover:drop-shadow-xl p-2 sm:p-3 rounded ">

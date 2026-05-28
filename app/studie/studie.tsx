@@ -97,7 +97,7 @@ export default function Studie({
               {question.question}
             </h1>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-30 text-lg sm:text-2xl md:text-4xl mt-4 sm:mt-6 md:mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-30 text-lg sm:text-2xl md:text-4xl mt-4 sm:mt-6 md:mt-10">
               {question.options.map((valg, ndx) => (
                 <div
                   key={ndx}
