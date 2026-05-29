@@ -45,7 +45,7 @@ export default async function Page() {
 
   return (
     <span className='w-dvw overflow-x-hidden '>
-      <section className="flex flex-col items-center justify-center mt-2  ">
+      <section className="flex flex-col items-center justify-center   ">
         <img className="aspect-16/9 w-full" src={"/splash.avif"} />
         <div className='absolute flex flex-col mb-10 h-fit items-center justify-start px-4'>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center">
