@@ -2,12 +2,12 @@
 
 import { signIn } from "next-auth/react";
 import { useState, FormEvent, ChangeEvent } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function SignInPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const error = searchParams.get("error");
+ 
+ 
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -45,17 +45,13 @@ export default function SignInPage() {
           <h1 className="text-3xl font-bold text-center mb-2 text-gray-900">
             Admin Login
           </h1>
-          <p className="text-center text-gray-600 mb-8">
+          <p className="text-center text-black mb-8">
             Sign in to access the admin dashboard
           </p>
 
-          {(error || signInError) && (
+          {(signInError) && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-red-800 text-sm">
-                {error === "CredentialsSignin"
-                  ? "Invalid email or password"
-                  : signInError || error}
-              </p>
+             
             </div>
           )}
 
@@ -63,7 +59,7 @@ export default function SignInPage() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-black mb-1"
               >
                 Email
               </label>
