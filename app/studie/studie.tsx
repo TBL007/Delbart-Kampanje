@@ -20,25 +20,28 @@ export default function Studie({
     setComplete(
       JSON.parse(
         localStorage.getItem("studie") ||
-          '{"complete":false}'
+        '{"complete":false}'
       ).complete
     )
   }, [])
 
   function Complete() {
     return (
-      <section className="flex flex-col items-center min-h-screen bg-gradient-to-b from-[#EF233C]/0 to-foreground/40 px-4 py-8">
-        <h1 className="text-xl sm:text-2xl md:text-3xl text-center">
-          Du har allerede levert undersøkelsen
-        </h1>
+     
+        <section className="flex flex-col items-center min-h-screen bg-gradient-to-b  from-[#EF233C]/20 to-foreground/40 px-4 py-8">
 
-        <Link href={"/"} className="w-full mt-20 sm:mt-30 md:mt-50">
-          <div className="flex flex-col items-center text-xl sm:text-2xl md:text-3xl bg-[#EF233C]/40 p-3 sm:p-4 w-full rounded">
-            Hjem
-          </div>
-        </Link>
-        <button onClick={()=> localStorage.removeItem("studie")} className="text-sm mt-4 hover:text-blue-300">clear</button>
-      </section>
+          <h1 className="text-xl sm:text-2xl md:text-3xl text-center">
+            Du har allerede levert undersøkelsen
+          </h1>
+
+          <Link href={"/"} className="w-full mt-20 sm:mt-30 md:mt-50 hover:text-blue-200">
+            <div className="flex flex-col items-center text-xl sm:text-2xl md:text-3xl  p-3 sm:p-4 w-full rounded ">
+              Hjem
+            </div>
+          </Link>
+
+        </section>
+      
     )
   }
 

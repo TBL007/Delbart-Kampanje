@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen overflow-x-hidden">
         <AuthProvider>
           <Nav />
-          <main className="mt-16 mb-10 sm:mt-20 flex-grow">
+          <main className="mt-16 sm:mt-20 flex-grow">
             {children}
           </main>
           <Footer />

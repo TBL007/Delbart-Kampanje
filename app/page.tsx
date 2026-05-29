@@ -14,6 +14,7 @@ export default async function Page() {
     return (match && match[2].length === 11) ? match[2] : null;
   }
 
+   
 
   const itemType = (item: any) => {
     if (item._type === "tekstblokk") {
@@ -40,8 +41,10 @@ export default async function Page() {
       )
     }
   }
+
+
   return (
-    <span className='w-dvw overflow-x-hidden'>
+    <span className='w-dvw overflow-x-hidden '>
       <section className="flex flex-col items-center justify-center mt-2  ">
         <img className="aspect-16/9 w-full" src={"/splash.avif"} />
         <div className='absolute flex flex-col mb-10 h-fit items-center justify-start px-4'>
@@ -56,7 +59,7 @@ export default async function Page() {
         </div>
 
       </section >
-      <section className="flex flex-col items-left w-full mt-10">
+      <section className="flex flex-col items-left w-full mt-10 mb-10">
         {innlegg.map((innlegg, ndx) => (
           <section key={ndx} className="flex flex-col w-full items-left gap-4 sm:gap-8 px-4 sm:px-6 md:px-10">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl">{innlegg.tittel}</h2>

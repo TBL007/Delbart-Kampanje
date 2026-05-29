@@ -109,4 +109,11 @@
 - la til content til quiz og undersøkelse via sanity
 ### refleksjon
 - gikk bra
+## Fredag 29.05
+### Gjort
+- styling
+- bugfix
+- publish til vercel
+### Refleksjon
+- gikk bra
 
