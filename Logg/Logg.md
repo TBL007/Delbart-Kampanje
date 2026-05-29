@@ -112,8 +112,12 @@
 ## Fredag 29.05
 ### Gjort
 - styling
-- bugfix
+- bugfixing
 - publish til vercel
+- vercel ci-cd bugfixing akka jeg villa ha den auto deploye fra Production branchen istedet for main
+- presentasjon
 ### Refleksjon
-- gikk bra
+- gikk bra bugsa var ganske åpenbare etter litt skumlesning av dokumentasjon
+### lært
+- kunne nok bareha brukt Better-Auth (større auth pakke) men det funker ca likt så er ikke noe "big deal"
 

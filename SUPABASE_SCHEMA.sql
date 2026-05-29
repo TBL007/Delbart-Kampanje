@@ -1,57 +1,77 @@
--- Supabase Schema for Admin User Management
-
--- Create admin_users table
-CREATE TABLE IF NOT EXISTS admin_users (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  email TEXT UNIQUE NOT NULL,
-  role TEXT NOT NULL DEFAULT 'admin',
-  created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
-  updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now()
+CREATE TABLE public.admin_users (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  email text NOT NULL UNIQUE,
+  role text NOT NULL DEFAULT 'admin',
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  updated_at timestamp with time zone NOT NULL DEFAULT now(),
+  CONSTRAINT admin_users_pkey PRIMARY KEY (id)
 );
 
--- Create an index on email for faster lookups
-CREATE INDEX IF NOT EXISTS idx_admin_users_email ON admin_users(email);
+CREATE TABLE public.survey_responses (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  submitted_at timestamp without time zone DEFAULT now(),
+  CONSTRAINT survey_responses_pkey PRIMARY KEY (id)
+);
 
--- Create a policy to allow service role to manage admin users (optional for RLS)
--- This is only needed if you enable Row Level Security (RLS) on the table
+CREATE TABLE public.survey_answers (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  response_id uuid NOT NULL,
+  question_id text NOT NULL,
+  answer_value text NOT NULL,
+  created_at timestamp without time zone DEFAULT now(),
+  CONSTRAINT survey_answers_pkey PRIMARY KEY (id),
+  CONSTRAINT survey_answers_response_id_fkey
+    FOREIGN KEY (response_id)
+    REFERENCES public.survey_responses(id)
+    ON DELETE CASCADE
+);
 
--- Enable RLS on admin_users table (optional)
--- ALTER TABLE admin_users ENABLE ROW LEVEL SECURITY;
+-- Function: get_survey_stats
+CREATE OR REPLACE FUNCTION public.get_survey_stats(qid text)
+RETURNS TABLE (
+  answer_value text,
+  count bigint,
+  total_responses bigint,
+  percentage numeric
+)
+LANGUAGE sql
+AS $$
+  WITH total AS (
+    SELECT COUNT(DISTINCT response_id) AS total_responses
+    FROM survey_answers
+    WHERE question_id = qid
+  ),
+  counts AS (
+    SELECT answer_value, COUNT(*) AS count
+    FROM survey_answers
+    WHERE question_id = qid
+    GROUP BY answer_value
+  )
+  SELECT
+    c.answer_value,
+    c.count,
+    t.total_responses,
+    ROUND(
+      (c.count::decimal / NULLIF(t.total_responses, 0)) * 100,
+      2
+    ) AS percentage
+  FROM counts c
+  CROSS JOIN total t;
+$$;
 
--- Allow service role to read all admin users
--- CREATE POLICY "Service role can read admin users"
---   ON admin_users
---   FOR SELECT
---   TO service_role
---   USING (true);
-
--- Allow service role to insert admin users
--- CREATE POLICY "Service role can insert admin users"
---   ON admin_users
---   FOR INSERT
---   TO service_role
---   WITH CHECK (true);
-
--- Allow service role to delete admin users
--- CREATE POLICY "Service role can delete admin users"
---   ON admin_users
---   FOR DELETE
---   TO service_role
---   USING (true);
-
--- Add trigger to update updated_at timestamp
-CREATE OR REPLACE FUNCTION update_admin_users_updated_at()
-RETURNS TRIGGER AS $$
+-- Trigger function: update_admin_users_updated_at
+CREATE OR REPLACE FUNCTION public.update_admin_users_updated_at()
+RETURNS trigger
+LANGUAGE plpgsql
+AS $$
 BEGIN
   NEW.updated_at = now();
   RETURN NEW;
 END;
-$$ LANGUAGE plpgsql;
+$$;
 
-CREATE TRIGGER admin_users_updated_at_trigger
-BEFORE UPDATE ON admin_users
+-- Trigger
+CREATE TRIGGER trigger_update_admin_users_updated_at
+BEFORE UPDATE ON public.admin_users
 FOR EACH ROW
-EXECUTE FUNCTION update_admin_users_updated_at();
-
--- Insert initial admin user (replace with your email)
--- INSERT INTO admin_users (email, role) VALUES ('your-email@example.com', 'admin');
+EXECUTE FUNCTION public.update_admin_users_updated_at();
