@@ -48,7 +48,7 @@ export default async function Page() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center">
           Del ansvarlig. Del smart
         </h2>
-        <Link href={"/studie"} className='items-center text-foreground'>
+        <Link href={"/studie"} className='items-center text-blue-300 hover:text-blue-400'>
           <h2 className="text-sm sm:text-base md:text-xl ">
             Delta i undersøkelsen vår
           </h2>

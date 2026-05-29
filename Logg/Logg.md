@@ -100,3 +100,13 @@
 - refaktor av undersøkelse siden gjort bedre
 ### refleksjon 
 - gikk bra
+## Onsdag 27.05
+- styling
+### refleksjon
+- gikk bra men hadde problemer med usestate changes(knapper) på tlf-touchscreen vet ikke hvorfor
+## torsdag 28.05
+### gjort
+- la til content til quiz og undersøkelse via sanity
+### refleksjon
+- gikk bra
+
