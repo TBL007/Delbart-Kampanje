@@ -5,7 +5,7 @@ import type { JWT } from "next-auth/jwt";
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
+const ADMIN_PASSWORD = ((process.env.NODE_ENV === "production")? process.env.ADMIN_PASS : "admin") || process.env.ADMIN_PASS
 async function isUserAdmin(email: string): Promise<boolean> {
   if (!supabaseUrl || !supabaseServiceKey) {
     throw new Error("Missing Supabase configuration");
@@ -47,7 +47,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const password = credentials.password as string;
 
         // For development, you can use:
-        if (email && password === "admin") {
+        if (email && password === ADMIN_PASSWORD) {
           return {
             id: email,
             email: email,
